@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 
 print('Loading classifier...')
 classifier = Meso4()
-classifier.load('weights/Meso4_DF.h5')
+classifier.load('Meso4_DF.h5')
 for layer in classifier.model.layers[:-4]:
     layer.trainable = False
 classifier.model.compile(optimizer = Adam(learning_rate = 0.005), loss = 'mean_squared_error', metrics = ['accuracy'])
